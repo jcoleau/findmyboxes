@@ -10,5 +10,23 @@ public interface BoxDAO {
 	 *
 	 */
 	public List<Box> getAllBoxes();
+	
+	
+	/**
+	 * Finds the smallest volume of all boxes passed in the List
+	 * DO NOT CALL BEST FIT WITH BOXES THAT ARE NOT A FIT
+	 * @param fittingBoxList
+	 * @return a Box Object that has the smallest volume of all boxes passed.
+	 */
+	public Box bestFit(List<Box> fittingBoxList);
+	
+	
+	/**
+	 * TO BE REFACTORED INTO ONE SINGLE METHOD
+	 * @param item
+	 * @param boxList
+	 * @return
+	 */
+	public List<Box> isAFit(Box item, List<Box> boxList);
 
 }

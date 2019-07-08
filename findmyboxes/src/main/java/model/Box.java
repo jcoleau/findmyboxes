@@ -9,10 +9,6 @@ public class Box {
 	private int priceInCents;
 	private String supplier;
 	
-	
-
-
-
 
 	public Box(double length, double width, double height) {
 
