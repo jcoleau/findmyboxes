@@ -1,13 +1,10 @@
-package com.findmyboxes;
-
-import java.util.Map;
+package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller 
-public class HelloController {
+public class FindMyBoxesController {
 
 	@RequestMapping("/greeting")
 	public String displayGreeting() {
