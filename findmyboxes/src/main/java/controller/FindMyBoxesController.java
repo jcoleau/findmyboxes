@@ -12,10 +12,11 @@ public class FindMyBoxesController {
 		
 		return "homepage";
 	}
-	
-	@RequestMapping(path = "/findmyboxes", method = RequestMethod.GET)
-	public String displayHomepage2() {
+
+	@RequestMapping(path = "/**", method = RequestMethod.GET)
+	public String displayCatchAll() {
 		
-		return "homepage";
+		return "catchAll";
 	}
+	
 }
