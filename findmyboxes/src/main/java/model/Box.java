@@ -10,6 +10,12 @@ public class Box {
 	private String supplier;
 	
 
+	public Box() {
+		this.length = 0;
+		this.width = 0;
+		this.height = 0;
+	}
+	
 	public Box(double length, double width, double height) {
 
 		double a = Math.max(length, width);

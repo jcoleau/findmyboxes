@@ -10,9 +10,8 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 public class JDBCBoxDAO implements BoxDAO {
 
-	/* For future database connection
-	private JdbcTemplate jdbcTemplate;
-	*/
+	//static list of boxes hardcoded with helper method at the bottom
+	//To be replaced by a JdbcTemplate
 	private static List<Box> boxList = boxLoader();
 	
 	public JDBCBoxDAO(DataSource dataSource) {
