@@ -15,8 +15,7 @@
 
 	<context:annotation-config />
 
-	<!-- This configuration tells Spring to scan (i.e. search) the com.techelevator
-		 package and look for any classes that need to be managed (e.g. Controllers) -->
+    <!-- This must point to the package containing the Controller -->
     <context:component-scan base-package="controller"/>
 
 	<!-- ********************** -->
