@@ -18,11 +18,11 @@ public interface BoxDAO {
 	 * @param fittingBoxList
 	 * @return a Box Object that has the smallest volume of all boxes passed.
 	 */
-	public Box bestFit(List<Box> fittingBoxList);
+	public Box getSmallestVolumeOfList(List<Box> fittingBoxList);
 	
 	
 	/**
-	 * TO BE COMBINED INTO ONE SINGLE METHOD WITH BESTFIT
+	 * Loads a List of boxes where the Item passed can fit
 	 * @param item
 	 * @param boxList
 	 * @return

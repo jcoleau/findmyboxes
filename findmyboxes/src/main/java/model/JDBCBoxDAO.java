@@ -38,7 +38,7 @@ public class JDBCBoxDAO implements BoxDAO {
 		return fittingBoxes;
 	}
 
-	public Box bestFit(List<Box> fittingBoxList) {
+	public Box getSmallestVolumeOfList(List<Box> fittingBoxList) {
 
 		double smallestVolume = fittingBoxList.get(0).getVolume();
 		Box theBox = fittingBoxList.get(0);
@@ -63,6 +63,7 @@ public class JDBCBoxDAO implements BoxDAO {
 
 		for (int i = 0; i < boxArray.length - 2; i += 3) {
 			Box box = new Box(boxArray[i], boxArray[i + 1], boxArray[i + 2]);
+			box.setSupplier("fedex");
 			boxList.add(box);
 		}
 
