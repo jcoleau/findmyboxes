@@ -1,10 +1,28 @@
 package model;
 
-public class Box {
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+public class Box {
+	
+
+	@NotBlank(message="Please enter a dimension in inches")
+	@Max(value=400, message="Maximum dimension value is 400 inches")
+	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double length;
+	
+	@NotBlank(message="Please enter a dimension in inches")
+	@Max(value=400, message="Maximum dimension value is 400 inches")
+	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double width;
+	
+	@NotBlank(message="Please enter a dimension in inches")
+	@Max(value=400, message="Maximum dimension value is 400 inches")
+	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double height;
+	
 	private boolean padding = false;
 	private int priceInCents;
 	private String supplier;
@@ -26,6 +44,21 @@ public class Box {
 		this.width = (length + width + height) -(this.length + this.height); 
 		
 	}
+	
+	public void arrangeDimensions() {
+		
+		double length = this.length;
+		double width = this.width;
+		double height = this.height;
+		
+		double a = Math.max(length, width);
+		this.length = Math.max(a, height);
+		double b = Math.min(length, width);
+		this.height = Math.min(b, height);
+		this.width = (length + width + height) -(this.length + this.height); 
+		
+	}
+	
 
 	@Override
 	public String toString() {

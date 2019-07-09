@@ -63,6 +63,7 @@ public class JDBCBoxDAO implements BoxDAO {
 
 		for (int i = 0; i < boxArray.length - 2; i += 3) {
 			Box box = new Box(boxArray[i], boxArray[i + 1], boxArray[i + 2]);
+			box.setSupplier("fedex");
 			boxList.add(box);
 		}
 

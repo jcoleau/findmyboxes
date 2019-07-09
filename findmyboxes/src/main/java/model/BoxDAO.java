@@ -22,7 +22,7 @@ public interface BoxDAO {
 	
 	
 	/**
-	 * TO BE COMBINED INTO ONE SINGLE METHOD WITH BESTFIT
+	 * Loads a List of boxes where the Item passed can fit
 	 * @param item
 	 * @param boxList
 	 * @return
