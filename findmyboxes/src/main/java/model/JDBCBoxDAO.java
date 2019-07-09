@@ -38,7 +38,7 @@ public class JDBCBoxDAO implements BoxDAO {
 		return fittingBoxes;
 	}
 
-	public Box bestFit(List<Box> fittingBoxList) {
+	public Box getSmallestVolumeOfList(List<Box> fittingBoxList) {
 
 		double smallestVolume = fittingBoxList.get(0).getVolume();
 		Box theBox = fittingBoxList.get(0);

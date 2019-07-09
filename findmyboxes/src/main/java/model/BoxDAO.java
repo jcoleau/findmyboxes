@@ -18,7 +18,7 @@ public interface BoxDAO {
 	 * @param fittingBoxList
 	 * @return a Box Object that has the smallest volume of all boxes passed.
 	 */
-	public Box bestFit(List<Box> fittingBoxList);
+	public Box getSmallestVolumeOfList(List<Box> fittingBoxList);
 	
 	
 	/**
