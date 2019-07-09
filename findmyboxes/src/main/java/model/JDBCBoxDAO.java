@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import javax.sql.DataSource;
@@ -35,6 +36,7 @@ public class JDBCBoxDAO implements BoxDAO {
 				}
 			}
 		}
+		Collections.sort(fittingBoxes, new SortByVolume());
 		return fittingBoxes;
 	}
 

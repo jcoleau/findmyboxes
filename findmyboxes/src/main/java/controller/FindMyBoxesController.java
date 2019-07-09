@@ -31,7 +31,8 @@ public class FindMyBoxesController {
 		flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "boxParameters", result);
 		return "redirect:/homePage";
 	}
-	boxFormValues.arrangeDimensions();
+	Box userItem = new Box();
+	userItem.arrangeDimensions();
 	
 	return "homepage";
 	}

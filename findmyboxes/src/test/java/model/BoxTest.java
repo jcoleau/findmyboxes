@@ -15,7 +15,6 @@ public class BoxTest {
 		assertEquals(0, box.getLength(), 1);
 		assertEquals(0, box.getWidth(), 1);
 		assertEquals(0, box.getHeight(), 1);
-		
 	}
 	
 	@Test
