@@ -8,3 +8,7 @@
 <title><c:out value="${pageTitle}"/></title>
 </head>
 <body>
+	<header>
+		<c:url value="/img/findmyboxes-logo.png" var="img_url"/>
+		<img src="${img_url}"/>
+	</header>

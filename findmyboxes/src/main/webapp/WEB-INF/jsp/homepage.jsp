@@ -4,4 +4,10 @@
 
 <h2>Hey there! You're pointing to the Controller correctly!</h2>
 
+<div class="content">
+	<div class="dimension_entry">
+		
+	</div>
+</div>
+
 <%@include file="common/footer.jsp" %>
