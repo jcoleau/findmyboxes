@@ -1,2 +1,3 @@
-</body>
+		</section>
+	</body>
 </html>
