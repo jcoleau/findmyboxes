@@ -22,7 +22,7 @@ public interface BoxDAO {
 	
 	
 	/**
-	 * TO BE REFACTORED INTO ONE SINGLE METHOD
+	 * TO BE COMBINED INTO ONE SINGLE METHOD WITH BESTFIT
 	 * @param item
 	 * @param boxList
 	 * @return
