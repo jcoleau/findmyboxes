@@ -2,6 +2,9 @@
 <c:set var="pageTitle" value="Find My Boxes" />
 <%@include file="common/header.jsp"%>
 
+
+
+
 <h1>Find the perfect box for your next shipping adventure</h1>
 <c:url var="boxParametersSubmitUrl" value="/" />
 <form method="POST" action="${boxParametersSubmitUrl}" modelAttribute="boxParameters">
