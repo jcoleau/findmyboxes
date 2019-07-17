@@ -26,6 +26,7 @@ public class Box {
 	private boolean padding = false;
 	private int priceInCents;
 	private String supplier;
+	private String supplierLogo;
 	
 
 	public Box() {
@@ -113,6 +114,13 @@ public class Box {
 	}
 	public double getVolume() {
 		return this.length * this.width * this.height;
+	}
+	public String getSupplierLogo() {
+		return supplierLogo;
+	}
+
+	public void setSupplierLogo(String supplierLogo) {
+		this.supplierLogo = supplierLogo;
 	}
 
 }
