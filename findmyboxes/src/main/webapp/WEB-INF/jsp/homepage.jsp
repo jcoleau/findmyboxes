@@ -2,10 +2,6 @@
 <c:set var="pageTitle" value="Find My Boxes" />
 <%@include file="common/header.jsp"%>
 
-<div class="bg-img">
-
-</div>
-
 
 <section class="hero is-link is-bold has-text-centered">
 	<div class="hero-body">
