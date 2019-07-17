@@ -1,8 +1,25 @@
-body {
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	color: #333333;
-	background-color: #f8f8ff;
-	font-family: sans-serif;
+.bg-img {
+	background-image: url(img/dog-box.jpg);
+        background-position: center center;
+        background-repeat:  no-repeat;
+        background-attachment: fixed;
+        background-size:  cover;
+        background-color: #999;
+}
+
+#logo-image {
+	max-height: none;
+}
+
+#product-image {
+	max-height: 500px;
+	width: auto;
+}
+
+#main-card {
+	max-width: 600px;
+}
+
+.dimension {
+	max-width: 100px;
 }
