@@ -58,17 +58,28 @@ public class JDBCBoxDAO implements BoxDAO {
 		List<Box> boxList = new LinkedList<Box>();
 
 		// Hard coded boxes Array from Fedex
-		double[] boxArray = new double[] {18, 12.5, 3, 17, 17, 7, 12, 9, 6, 20,
+		double[] fedexboxArray = new double[] {18, 12.5, 3, 17, 17, 7, 12, 9, 6, 20,
 				20, 12, 13, 9, 11, 23, 17, 12, 12, 12, 18, 8, 8, 8, 20, 20, 20,
 				11, 11, 11, 24, 24, 24, 14, 14, 14, 28, 28, 28, 16, 16, 16, 50,
 				20, 8 };
 
-		for (int i = 0; i < boxArray.length - 2; i += 3) {
-			Box box = new Box(boxArray[i], boxArray[i + 1], boxArray[i + 2]);
+		for (int i = 0; i < fedexboxArray.length - 2; i += 3) {
+			Box box = new Box(fedexboxArray[i], fedexboxArray[i + 1], fedexboxArray[i + 2]);
 			box.setSupplier("fedex");
 			box.setSupplierLogo("fedex-logo.png");
 			boxList.add(box);
 		}
+		
+		// Hard coded boxes Array from UPS
+		double[] upsBoxArray = new double[] {1,2,3};
+
+		for (int i = 0; i < upsBoxArray.length - 2; i += 3) {
+			Box box = new Box(upsBoxArray[i], upsBoxArray[i + 1], upsBoxArray[i + 2]);
+			box.setSupplier("ups");
+			box.setSupplierLogo("ups-logo.png");
+			boxList.add(box);
+		}
+		
 
 		return boxList;
 	}
