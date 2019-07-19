@@ -16,15 +16,13 @@ public class JDBCBoxDAOTest {
 		double[] testArray = {1,2,3,1,2,2};
 		List<Box> boxList = boxLoader(testArray);
 		Box b = new Box();
-		JdbcBoxDao.isAFit(b, boxList);
+		JdbcBoxDao.isAFit(b);
 		assertEquals(4,boxList.get(0).getVolume(),2);
 		
 	}
 	
 	
-	
-	
-	
+
 	private static List<Box> boxLoader(double[] boxArray){
 		List<Box> boxList = new LinkedList<Box>();
 

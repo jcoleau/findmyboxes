@@ -25,7 +25,7 @@ public class JDBCBoxDAO implements BoxDAO {
 		return boxList;
 
 	}
-	public List<Box> isAFit(Box item, List<Box> boxList) {
+	public List<Box> isAFit(Box item) {
 		List<Box> fittingBoxes = new ArrayList<Box>();
 		for (Box b : boxList) {
 			if (b.getLength() >= item.getLength()) {
