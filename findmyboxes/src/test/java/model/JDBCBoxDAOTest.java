@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class JDBCBoxDAOTest {
@@ -13,16 +14,28 @@ public class JDBCBoxDAOTest {
 	
 	@Test
 	public void boxes_should_be_sorted_out_by_volume() {
-		double[] testArray = {1,2,3,1,2,2};
-		List<Box> boxList = boxLoader(testArray);
-		Box b = new Box();
-		JdbcBoxDao.getListOfFittingBoxes(b);
-		assertEquals(4,boxList.get(0).getVolume(),2);
+		
+		
+		
 		
 	}
 	
+//	@Test
+//	public void getListOfFittingBoxes_should_return_a_list_of_box() {
+//		Box b = new Box(1,2,3);
+//		List<Box> expectedBoxList = JdbcBoxDao.getListOfFittingBoxes(b);
+//		Assert.assertNotNull(expectedBoxList);
+//	}
 	
-
+	@Test
+	public void getListOfFittingBoxes_of_50_20_8() {
+		Box b = new Box(50,20,8);
+		List<Box> expectedBoxList = JdbcBoxDao.getListOfFittingBoxes(b);
+		System.out.println("I have been returned " + expectedBoxList.get(0));
+		Assert.assertNotNull(expectedBoxList);
+	}
+	
+	
 	private static List<Box> boxLoader(double[] boxArray){
 		List<Box> boxList = new LinkedList<Box>();
 

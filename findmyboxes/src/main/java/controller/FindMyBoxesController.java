@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -21,13 +22,13 @@ import model.JDBCBoxDAO;
 @Controller 
 public class FindMyBoxesController {
 	
-	private JDBCBoxDAO JdbcBoxDao;
+	private JDBCBoxDAO JdbcBoxDao = new JDBCBoxDAO(null);
 
 	@RequestMapping(path = "/", method = RequestMethod.GET)
-	public String displayHomepage() {
-//	if(!modelHolder.containsAttribute("boxParamaters")) {
-//		modelHolder.addAttribute("boxParamaters", new Box());
-//	}
+	public String displayHomepage(ModelMap modelHolder) {
+	if(!modelHolder.containsAttribute("boxParamaters")) {
+		modelHolder.addAttribute("boxParamaters", new Box());
+	}
 	
 	return "homepage";
 	}
@@ -35,20 +36,18 @@ public class FindMyBoxesController {
 
 	//add modelHolder to be loaded with boxes that fit.
 	@RequestMapping(path = "/", method = RequestMethod.POST)
-	public String displayHomepageForm(@Valid @ModelAttribute("boxParameters") Box boxFormValues, 
+	public String displayHomepageForm(@Valid @ModelAttribute("boxParameters")Box boxFormValues, 
 			BindingResult result, RedirectAttributes flash, ModelMap modelHolder) {
 	if(result.hasErrors()) {
 		flash.addFlashAttribute("boxParameters",boxFormValues);
 		flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "boxParameters", result);
 		return "redirect:/homePage";
 	}
-	
-//	Box userItem = new Box();
-//	userItem = boxFormValues;
-	
+		
 	boxFormValues.arrangeDimensions();
 	System.out.println(boxFormValues);
-	List<Box> fittedBoxes = JdbcBoxDao.getListOfFittingBoxes(boxFormValues);
+	List<Box> fittedBoxes = new ArrayList<Box>();
+	fittedBoxes = JdbcBoxDao.getListOfFittingBoxes(boxFormValues);
 	modelHolder.put("boxes", fittedBoxes);
 	
 

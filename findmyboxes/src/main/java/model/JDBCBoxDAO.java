@@ -72,7 +72,7 @@ public class JDBCBoxDAO implements BoxDAO {
 		}
 		
 		// Hard coded boxes Array from UPS
-		double[] upsBoxArray = new double[] {1,2,3};
+		double[] upsBoxArray = new double[] {10,20,30};
 
 		for (int i = 0; i < upsBoxArray.length - 2; i += 3) {
 			Box box = new Box(upsBoxArray[i], upsBoxArray[i + 1], upsBoxArray[i + 2]);
