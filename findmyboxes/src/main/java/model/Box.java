@@ -24,6 +24,7 @@ public class Box {
 	private double height;
 	
 	private boolean padding = false;
+	private double volume = this.length * this.width * this.height;
 	private int priceInCents;
 	private String supplier;
 	private String supplierLogo;
@@ -63,7 +64,7 @@ public class Box {
 
 	@Override
 	public String toString() {
-		return "Length: " + this.length + "\", Width: " + this.width + "\", Height: " + this.height + "\"";
+		return "Length: " + this.length + "\", Width: " + this.width + "\", Height: " + this.height + "\"" + " V:" + this.getVolume();
 	}
 
 	public double getLength() {
