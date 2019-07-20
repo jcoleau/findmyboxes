@@ -27,6 +27,6 @@ public interface BoxDAO {
 	 * @param boxList
 	 * @return
 	 */
-	public List<Box> isAFit(Box item);
+	public List<Box> getListOfFittingBoxes(Box item);
 
 }

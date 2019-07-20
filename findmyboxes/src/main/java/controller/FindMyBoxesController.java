@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,6 +25,10 @@ public class FindMyBoxesController {
 
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String displayHomepage() {
+//	if(!modelHolder.containsAttribute("boxParamaters")) {
+//		modelHolder.addAttribute("boxParamaters", new Box());
+//	}
+	
 	return "homepage";
 	}
 	
@@ -38,11 +43,12 @@ public class FindMyBoxesController {
 		return "redirect:/homePage";
 	}
 	
-	Box userItem = new Box();
-	userItem = boxFormValues;
-	userItem.arrangeDimensions();
+//	Box userItem = new Box();
+//	userItem = boxFormValues;
 	
-	List<Box> fittedBoxes = JdbcBoxDao.isAFit(userItem);
+	boxFormValues.arrangeDimensions();
+	System.out.println(boxFormValues);
+	List<Box> fittedBoxes = JdbcBoxDao.getListOfFittingBoxes(boxFormValues);
 	modelHolder.put("boxes", fittedBoxes);
 	
 

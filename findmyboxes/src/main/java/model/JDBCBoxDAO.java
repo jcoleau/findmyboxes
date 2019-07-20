@@ -13,8 +13,7 @@ public class JDBCBoxDAO implements BoxDAO {
 
 	//static list of boxes hardcoded with helper method at the bottom
 	//To be replaced by a JdbcTemplate
-	private static List<Box> boxList = boxLoader();
-	
+	private static List<Box> boxList;
 	public JDBCBoxDAO(DataSource dataSource) {
 		/* For future database connection
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -25,9 +24,11 @@ public class JDBCBoxDAO implements BoxDAO {
 		return boxList;
 
 	}
-	public List<Box> isAFit(Box item) {
+	public List<Box> getListOfFittingBoxes(Box item) {
 		List<Box> fittingBoxes = new ArrayList<Box>();
+		boxList = boxLoader();
 		for (Box b : boxList) {
+			System.out.println(b);
 			if (b.getLength() >= item.getLength()) {
 				if (b.getWidth() >= item.getWidth()) {
 					if (b.getHeight() >= item.getHeight()) {

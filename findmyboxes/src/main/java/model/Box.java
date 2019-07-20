@@ -8,19 +8,19 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Box {
 	
 
-	@NotBlank(message="Please enter a dimension in inches")
-	@Max(value=400, message="Maximum dimension value is 400 inches")
-	@Min(value=0, message="Minimum dimension value is 0.1 inches")
+//	@NotBlank(message="Please enter a dimension in inches")
+//	@Max(value=400, message="Maximum dimension value is 400 inches")
+//	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double length;
 	
-	@NotBlank(message="Please enter a dimension in inches")
-	@Max(value=400, message="Maximum dimension value is 400 inches")
-	@Min(value=0, message="Minimum dimension value is 0.1 inches")
+//	@NotBlank(message="Please enter a dimension in inches")
+//	@Max(value=400, message="Maximum dimension value is 400 inches")
+//	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double width;
 	
-	@NotBlank(message="Please enter a dimension in inches")
-	@Max(value=400, message="Maximum dimension value is 400 inches")
-	@Min(value=0, message="Minimum dimension value is 0.1 inches")
+//	@NotBlank(message="Please enter a dimension in inches")
+//	@Max(value=400, message="Maximum dimension value is 400 inches")
+//	@Min(value=0, message="Minimum dimension value is 0.1 inches")
 	private double height;
 	
 	private boolean padding = false;
