@@ -59,6 +59,7 @@
 <br>
 <div id="results" class="container has-text-centered">
 	<c:forEach items="${boxes}" var="box">
+		<c:set var="areResultsVisible" value="true"></c:set>
 		<div class="card card-content">
 			<div class="columns">
 				<div class="column">
@@ -67,12 +68,12 @@
 					</figure>
 				</div>
 				<div class="column">
-					<h4 class="subtitle has-text-weight-semibold">Dimensions</h3>
+					<p class="has-text-weight-semibold">Dimensions</p>
 					<span>${box.length}" x ${box.width}" x ${box.height}"</span>
 				</div>
 				<div class="column">
-					<h4 class="subtitle has-text-weight-semibold">Price</h3>
-					<span><fmt:formatNumber value="${box.priceInCents}" type="CURRENCY"></fmt:formatNumber></span>
+					<p class="has-text-weight-semibold">Price</p>
+					<span><fmt:formatNumber value="${box.price}" type="CURRENCY"></fmt:formatNumber></span>
 				</div>
 			</div>
 		</div>

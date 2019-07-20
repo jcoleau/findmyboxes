@@ -10,7 +10,7 @@
 	<title><c:out value="${pageTitle}" /></title>
 	<c:url value="/" var="homepage" />
 	<link rel="stylesheet" href="resources/bulma/css/bulma.css">
-	<link rel="stylesheet" href="resources/fontawesome/css/fontawesome.css">
+	<link rel="stylesheet" href="resources/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="resources/css/site.css">
 </head>
 <body>
