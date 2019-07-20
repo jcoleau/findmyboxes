@@ -25,7 +25,7 @@ public class Box {
 	
 	private boolean padding = false;
 	private double volume = this.length * this.width * this.height;
-	private int priceInCents = 0;
+	private int priceInCents = 500;
 	private String supplier;
 	private String supplierLogo;
 	
