@@ -25,7 +25,7 @@ public class Box {
 	
 	private boolean padding = false;
 	private double volume = this.length * this.width * this.height;
-	private int priceInCents;
+	private int priceInCents = 0;
 	private String supplier;
 	private String supplierLogo;
 	
@@ -86,6 +86,11 @@ public class Box {
 	public void setPadding(boolean padding) {
 		this.padding = padding;
 	}
+	
+	public double getPrice() {
+		return priceInCents/100;
+	}
+	
 	public int getPriceInCents() {
 		return priceInCents;
 	}
