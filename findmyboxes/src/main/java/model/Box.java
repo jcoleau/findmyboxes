@@ -90,7 +90,7 @@ public class Box {
 	}
 	
 	public double getPrice() {
-		return priceInCents/100;
+		return priceInCents/100.0;
 	}
 	
 	public int getPriceInCents() {

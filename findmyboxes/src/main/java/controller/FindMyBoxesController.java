@@ -49,7 +49,7 @@ public class FindMyBoxesController {
 	List<Box> fittedBoxes = new ArrayList<Box>();
 	fittedBoxes = JdbcBoxDao.getListOfFittingBoxes(boxFormValues);
 	modelHolder.put("boxes", fittedBoxes);
-	
+	flash.addFlashAttribute("boxParameters",boxFormValues);
 
 	return "homepage";
 	}
