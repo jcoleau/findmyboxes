@@ -25,7 +25,7 @@ public class Box {
 	
 	private boolean padding = false;
 	private double volume = this.length * this.width * this.height;
-	private int priceInCents = 500;
+	private int priceInCents;
 	private String supplier;
 	private String supplierLogo;
 	
@@ -34,9 +34,10 @@ public class Box {
 		this.length = 0;
 		this.width = 0;
 		this.height = 0;
+		this.priceInCents=500;
 	}
 	
-	public Box(double length, double width, double height) {
+	public Box(double length, double width, double height, int priceInCents) {
 
 		double a = Math.max(length, width);
 		this.length = Math.max(a, height); // stores the max value passed to the constructor as the box length
@@ -44,6 +45,7 @@ public class Box {
 		this.height = Math.min(b, height); // stores the min value passed to the constructor as the box height
 		// retrieve the middle value and store it as the box width.
 		this.width = (length + width + height) -(this.length + this.height); 
+		this.priceInCents = priceInCents;
 		
 	}
 	

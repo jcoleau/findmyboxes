@@ -29,7 +29,7 @@ public class JDBCBoxDAOTest {
 	
 	@Test
 	public void getListOfFittingBoxes_of_50_20_8() {
-		Box b = new Box(50,20,8);
+		Box b = new Box(50,20,8,500);
 		List<Box> expectedBoxList = JdbcBoxDao.getListOfFittingBoxes(b);
 		System.out.println("I have been returned " + expectedBoxList.get(0));
 		Assert.assertNotNull(expectedBoxList);
@@ -41,7 +41,7 @@ public class JDBCBoxDAOTest {
 
 
 		for (int i = 0; i < boxArray.length - 2; i += 3) {
-			Box box = new Box(boxArray[i], boxArray[i + 1], boxArray[i + 2]);
+			Box box = new Box(boxArray[i], boxArray[i + 1], boxArray[i + 2],500);
 			box.setSupplier("fedex");
 			boxList.add(box);
 		}
