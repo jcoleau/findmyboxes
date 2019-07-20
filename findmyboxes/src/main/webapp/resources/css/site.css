@@ -7,7 +7,7 @@
 	width: auto;
 }
 
-#main-card {
+#main-card, #results {
 	max-width: 600px;
 }
 

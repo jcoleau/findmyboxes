@@ -56,5 +56,27 @@
 		</div>
 	</form>
 </div>
+<br>
+<div id="results" class="container has-text-centered">
+	<c:forEach items="${boxes}" var="box">
+		<div class="card card-content">
+			<div class="columns">
+				<div class="column">
+					<figure class="image is-64x64">
+						<img src="img/${box.supplierLogo}" title="Supplier logo">
+					</figure>
+				</div>
+				<div class="column">
+					<h4 class="subtitle has-text-weight-semibold">Dimensions</h3>
+					<span>${box.length}" x ${box.width}" x ${box.height}"</span>
+				</div>
+				<div class="column">
+					<h4 class="subtitle has-text-weight-semibold">Price</h3>
+					<span><fmt:formatNumber value="${box.priceInCents}" type="CURRENCY"></fmt:formatNumber></span>
+				</div>
+			</div>
+		</div>
+	</c:forEach>
+</div>
 
 <%@include file="common/footer.jsp"%>
