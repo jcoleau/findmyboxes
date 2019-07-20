@@ -37,7 +37,7 @@ public class JDBCBoxDAO implements BoxDAO {
 				}
 			}
 		}
-		Collections.sort(fittingBoxes, new SortByVolume());
+		
 		return fittingBoxes;
 	}
 
