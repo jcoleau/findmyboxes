@@ -45,7 +45,7 @@ public class FindMyBoxesController {
 	}
 		
 	boxFormValues.arrangeDimensions();
-	System.out.println(boxFormValues);
+	
 	List<Box> fittedBoxes = new ArrayList<Box>();
 	fittedBoxes = JdbcBoxDao.getListOfFittingBoxes(boxFormValues);
 	modelHolder.put("boxes", fittedBoxes);
