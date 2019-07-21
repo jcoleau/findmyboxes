@@ -30,21 +30,21 @@
 					<div class="field dimension">
 						<label class="label" for="height">Height</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="20.75"
+							<input class="input" type="text" placeholder="20.75 in"
 								maxlength="8" name="height" id="height" required />
 						</div>
 					</div>
 					<div class="field dimension">
 						<label class="label" for="width">Width</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="8.25" maxlength="8"
+							<input class="input" type="text" placeholder="8.25 in" maxlength="8"
 								name="width" id="width" required />
 						</div>
 					</div>
 					<div class="field dimension">
 						<label class="label" for="length">Length</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="8.25" maxlength="8"
+							<input class="input" type="text" placeholder="8.25 in" maxlength="8"
 								name="length" id="length" required />
 						</div>
 					</div>
