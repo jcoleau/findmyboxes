@@ -94,6 +94,16 @@ public class JDBCBoxDAO implements BoxDAO {
 			box.setSupplierLogo("home-depot-logo.png");
 			boxList.add(box);
 		}
+		
+		double[] lowesBoxArray = new double[] {24,18,18,178,18,16,18,147,16,12,12,88,24.8125,35.8125,24,375,1293,22,22,21.5,258,24,
+				24,25,1698};
+
+		for (int i = 0; i < homeDepotBoxArray.length - 3; i += 4) {
+			Box box = new Box(homeDepotBoxArray[i], homeDepotBoxArray[i + 1], homeDepotBoxArray[i + 2], (int)homeDepotBoxArray[i+3]);
+			box.setSupplier("Lowes");
+			box.setSupplierLogo("lowes-logo.png");
+			boxList.add(box);
+		}
 
 		return boxList;
 	}
