@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="pageTitle" value="Find My Boxes" />
 <%@include file="common/header.jsp"%>
 
@@ -30,21 +31,21 @@
 					<div class="field dimension">
 						<label class="label" for="height">Height</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="20.75 in"
+							<input class="input" type="text" placeholder="20.75 (in)"
 								maxlength="8" name="height" id="height" required />
 						</div>
 					</div>
 					<div class="field dimension">
 						<label class="label" for="width">Width</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="8.25 in" maxlength="8"
+							<input class="input" type="text" placeholder="8.25 (in)" maxlength="8"
 								name="width" id="width" required />
 						</div>
 					</div>
 					<div class="field dimension">
 						<label class="label" for="length">Length</label>
 						<div class="control">
-							<input class="input" type="text" placeholder="8.25 in" maxlength="8"
+							<input class="input" type="text" placeholder="8.25 (in)" maxlength="8"
 								name="length" id="length" required />
 						</div>
 					</div>
@@ -58,8 +59,11 @@
 </div>
 <br>
 <div id="results" class="container has-text-centered">
+	<c:if test="${fn:length(boxes) > 0}">
+		<h2 class="title">Results</h2>
+		<h4 class="subtitle">Sorted by Volume</h4>
+	</c:if>
 	<c:forEach items="${boxes}" var="box">
-		<c:set var="areResultsVisible" value="true"></c:set>
 		<div class="card card-content">
 			<div class="columns">
 				<div class="column">
