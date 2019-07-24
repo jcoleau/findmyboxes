@@ -60,7 +60,7 @@
 <br>
 <div id="results" class="container has-text-centered">
 	<c:if test="${fn:length(boxes) > 0}">
-		<h2 class="title">Results</h2>
+		<h4 class="subtitle">Best Fits for: ${boxParameters.height}" x ${boxParameters.width}" x ${boxParameters.length}"</h4>
 		<h4 class="subtitle">Sorted by Volume</h4>
 	</c:if>
 	<c:forEach items="${boxes}" var="box">
