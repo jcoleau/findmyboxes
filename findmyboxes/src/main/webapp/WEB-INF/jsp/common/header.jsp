@@ -7,6 +7,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><c:out value="${pageTitle}" /></title>
 	<c:url value="/" var="homepage" />
 	<link rel="stylesheet" href="resources/bulma/css/bulma.css">
